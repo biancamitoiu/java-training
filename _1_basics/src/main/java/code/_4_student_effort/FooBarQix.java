@@ -32,36 +32,39 @@ public class FooBarQix {
         return rez;
     }
     public static String compute2(int num){
-        String rez = "";
+        String res = "";
         boolean verif = false;
 
-        if (num % 3 == 0) rez += "Foo";
-        if (num % 5 == 0) rez += "Bar";
-        if (num % 7 == 0) rez += "Qix";
+        if (num % 3 == 0) res += "Foo";
+        if (num % 5 == 0) res += "Bar";
+        if (num % 7 == 0) res += "Qix";
 
-        char[] cifre = String.valueOf(num).toCharArray();
-        for(char cifra : cifre) {
-            if (cifra == '3')
-                rez += "Foo";
-            else if (cifra == '5')
-                rez += "Bar";
-
-            else if (cifra == '7'){
-                rez += "Qix";
+        char[] didits = String.valueOf(num).toCharArray();
+        for(char digit : didits) {
+            if (digit == '3') {
+                res += "Foo";
                 verif = true;
             }
-            else if (cifra == '0'){
-                rez += "*";
+            else if (digit == '5') {
+                res += "Bar";
                 verif = true;
             }
-            if (rez.isEmpty() && verif == false) {
-                rez += cifra;
+            else if (digit == '7'){
+                res += "Qix";
+                verif = true;
+            }
+            else if (digit == '0'){
+                res += "*";
+                verif = true;
+            }
+            if (res.isEmpty() && verif == false) {
+                res += digit;
             }
 
         }
-        if (rez.isEmpty()) {
-            rez = String.valueOf(num);
+        if (res.isEmpty()) {
+            res = String.valueOf(num);
         }
-        return rez;
+        return res;
     }
 }

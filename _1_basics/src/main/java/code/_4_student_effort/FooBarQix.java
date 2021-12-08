@@ -39,8 +39,8 @@ public class FooBarQix {
         if (num % 5 == 0) res += "Bar";
         if (num % 7 == 0) res += "Qix";
 
-        char[] didits = String.valueOf(num).toCharArray();
-        for(char digit : didits) {
+        char[] digits = String.valueOf(num).toCharArray();
+        for(char digit : digits) {
             if (digit == '3') {
                 res += "Foo";
                 verif = true;

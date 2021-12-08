@@ -45,6 +45,7 @@ public class PawnTest {
         assertEquals(3, testSubject.getYCoordinate());
     }
 
+
     @Test
     public void testPawn_Move_LegalCoordinates_Forward_UpdatesCoordinates() {
         chessBoard.Add(testSubject, 6, 3, PieceColor.BLACK);
